@@ -1,3 +1,5 @@
+# Palworld Host Save Fixer - created by vanloads
+# Licensed under GPL-3.0 (see LICENSE)
 """Tkinter front end for the Palworld host save fixer."""
 from __future__ import annotations
 
@@ -17,9 +19,11 @@ from .world import (HOST_UID, TransferError, World, copy_local_data, norm_uid,
 
 from . import __version__
 
-APP_TITLE = f"Palworld Host Save Fixer v{__version__}"
+APP_TITLE = f"Palworld Host Save Fixer v{__version__}  -  by vanloads"
 
 GUIDE = """\
+Palworld Host Save Fixer - created by vanloads
+
 WHY YOUR CHARACTER DISAPPEARED
 In a co-op world the host is always saved under the placeholder ID
 00000000-0000-0000-0000-000000000001. Everyone who joins gets an ID derived

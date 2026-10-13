@@ -1,3 +1,5 @@
+# Palworld Host Save Fixer - created by vanloads
+# Licensed under GPL-3.0 (see LICENSE)
 """Palworld world model and the host-character transfer.
 
 Why the host loses their character

@@ -1,3 +1,5 @@
+# Palworld Host Save Fixer - created by vanloads
+# Licensed under GPL-3.0 (see LICENSE)
 """Reading and writing Palworld's compressed ``.sav`` container.
 
 Layout: ``u32 uncompressed_len, u32 compressed_len, 3-byte magic, 1-byte type``

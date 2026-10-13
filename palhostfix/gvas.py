@@ -1,3 +1,5 @@
+# Palworld Host Save Fixer - created by vanloads
+# Licensed under GPL-3.0 (see LICENSE)
 """Offset-tracking reader for Unreal Engine GVAS save data (as used by Palworld).
 
 Rather than deserialising into Python objects and re-serialising (where any

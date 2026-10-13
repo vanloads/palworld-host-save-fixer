@@ -1,5 +1,7 @@
 # Palworld Host Save Fixer
 
+*Created by **vanloads***
+
 **Moved your co-op world to a dedicated server and the host had to make a new
 character? This puts the old one back.**
 
@@ -112,7 +114,7 @@ their next autosave.
 
 ## License & credits
 
-GPL-3.0. See [LICENSE](LICENSE).
+Copyright (C) 2026 vanloads. Licensed under GPL-3.0; see [LICENSE](LICENSE).
 
 The save format knowledge builds on community research by
 [cheahjs/palworld-save-tools](https://github.com/cheahjs/palworld-save-tools),
