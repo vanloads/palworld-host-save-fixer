@@ -13,6 +13,7 @@ from tkinter import filedialog, messagebox, ttk
 from tkinter.scrolledtext import ScrolledText
 
 from .gvas import fmt_guid, parse_gvas
+from .guide import GuideTab
 from .savfile import read_sav
 from .world import (HOST_UID, TransferError, World, copy_local_data, norm_uid,
                     restore_backup, scan_uid)
@@ -111,7 +112,7 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title(APP_TITLE)
-        self.geometry("900x680")
+        self.geometry("960x820")
         self.minsize(760, 560)
         self.world: World | None = None
         self.choices = []
@@ -119,7 +120,7 @@ class App(tk.Tk):
         self.busy = False
         self._build()
         self.after(100, self._pump)
-        self.after(200, self._refresh_local_worlds)
+        # The Guide tab runs _refresh_local_worlds once the user says it may look.
 
     # -- layout ----------------------------------------------------------
     def _build(self):
@@ -127,11 +128,13 @@ class App(tk.Tk):
         if "vista" in style.theme_names():
             style.theme_use("vista")
         style.configure("Head.TLabel", font=("Segoe UI", 11, "bold"))
-        nb = ttk.Notebook(self)
+        nb = self.nb = ttk.Notebook(self)
         nb.pack(fill="both", expand=True, padx=8, pady=(8, 0))
         self.tab_main = ttk.Frame(nb, padding=10)
         self.tab_extra = ttk.Frame(nb, padding=10)
         self.tab_help = ttk.Frame(nb, padding=10)
+        self.tab_guide = GuideTab(nb, self)
+        nb.add(self.tab_guide, text="Start here (Guide)")
         nb.add(self.tab_main, text="Transfer")
         nb.add(self.tab_extra, text="Extras")
         nb.add(self.tab_help, text="Why / How-to")
